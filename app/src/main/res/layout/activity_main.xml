@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/Root"
+    android:animateLayoutChanges="true"
+    >
+
+   <FrameLayout
+       android:visibility="visible"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:id="@+id/loginbck">
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:src="@drawable/log_bkg"
+           android:scaleType="centerCrop"/>
+
+   </FrameLayout>
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/loginlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:background="#F3EBEB"
+        android:animateLayoutChanges="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginVertical="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:singleLine="false"
+            android:text="Log In/Sign Up"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textDirection="firstStrong"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtemail"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:textSize="15sp"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="Input: Email Address"
+            android:textColor="@color/black"
+            android:textColorHint="#6A6969"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:id="@+id/txtpswd"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="10dp"
+            android:textSize="15sp"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="Enter A Custom Password"
+            android:textColor="@color/black"
+            android:textColorHint="#6A6969"
+            android:inputType="textPassword" />
+
+        <RadioGroup
+            android:id="@+id/rgp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:id="@+id/rgbLect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lecturer"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:onClick="checkbtn"
+                />
+            <RadioButton
+                android:id="@+id/rgbStu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:onClick="checkbtn"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/logbtn"
+                android:layout_marginHorizontal="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log In"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:elevation="10dp"
+                />
+            <Button
+                android:id="@+id/signbtn"
+                android:layout_marginHorizontal="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/rememberchk"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Remember Log-in"
+            android:textSize="12dp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+</RelativeLayout>

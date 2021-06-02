@@ -1,0 +1,67 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.taskmate"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:5:22-64
+12
+13    <application
+13-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:7:5-23:19
+14        android:allowBackup="true"
+14-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:8:9-35
+15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+15-->[androidx.core:core:1.3.1] C:\Users\KIAN\.gradle\caches\transforms-2\files-2.1\50f1ca78fbc1677adba959cd11a28334\core-1.3.1\AndroidManifest.xml:24:18-86
+16        android:debuggable="true"
+17        android:extractNativeLibs="false"
+18        android:icon="@mipmap/ic_launcher"
+18-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:9:9-43
+19        android:label="@string/app_name"
+19-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:10:9-41
+20        android:roundIcon="@mipmap/ic_launcher_round"
+20-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:11:9-54
+21        android:supportsRtl="true"
+21-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:12:9-35
+22        android:testOnly="true"
+23        android:theme="@style/Theme.TaskMate" >
+23-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:13:9-46
+24        <activity
+24-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:14:9-15:62
+25            android:name="com.example.taskmate.NavDrawerActivity"
+25-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:14:19-52
+26            android:theme="@style/Theme.TaskMate" />
+26-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:15:13-50
+27        <activity android:name="com.example.taskmate.MainActivity" >
+27-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:16:9-22:20
+27-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:16:19-47
+28            <intent-filter>
+28-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:17:13-21:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:18:17-69
+29-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:18:25-66
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:20:17-77
+31-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:20:27-74
+32            </intent-filter>
+33        </activity>
+34
+35        <provider
+35-->[com.squareup.picasso:picasso:2.71828] C:\Users\KIAN\.gradle\caches\transforms-2\files-2.1\9821d5b5d6714b9d72fa18a2274acde2\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+36            android:name="com.squareup.picasso.PicassoProvider"
+36-->[com.squareup.picasso:picasso:2.71828] C:\Users\KIAN\.gradle\caches\transforms-2\files-2.1\9821d5b5d6714b9d72fa18a2274acde2\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+37            android:authorities="com.example.taskmate.com.squareup.picasso"
+37-->[com.squareup.picasso:picasso:2.71828] C:\Users\KIAN\.gradle\caches\transforms-2\files-2.1\9821d5b5d6714b9d72fa18a2274acde2\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+38            android:exported="false" />
+38-->[com.squareup.picasso:picasso:2.71828] C:\Users\KIAN\.gradle\caches\transforms-2\files-2.1\9821d5b5d6714b9d72fa18a2274acde2\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+39    </application>
+40
+41</manifest>
