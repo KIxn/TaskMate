@@ -3,10 +3,20 @@ package com.example.taskmate;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridLayout;
+import android.widget.Toast;
+
+import org.json.JSONArray;
+
+import okhttp3.HttpUrl;
+import okhttp3.Request;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +29,9 @@ public class DashboardFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "USER_ID";
     private static final String ARG_PARAM2 = "PERM";
+    private SwipeRefreshLayout swipeRefreshLayout;
+    private RecyclerView recyclerView;
+    private DashboardAdapter dashboardAdapter;
 
     //
     private String USER_ID;
@@ -60,8 +73,50 @@ public class DashboardFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.dashboard_fragment, container, false);
-        //TODO populate fragment: (set cardviews to => android:stateLIstAnimator="@null" => so cards dont peak through fragments)
         //use view.fvb
+        //initialize
+        swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.dashboard_refresh_layout);
+        recyclerView = (RecyclerView) view.findViewById(R.id.dash_recycler);
+        //get Assignments as JSON
+        HttpUrl httpUrl = new HttpUrl.Builder()
+                .scheme("https")
+                .host("lamp.ms.wits.ac.za").addPathSegment("home").addPathSegment("s2307935").addPathSegment("getAssignments.php")
+                .build();
+        Request request = new Request.Builder()
+                .url(httpUrl)
+                .get()
+                .build();
+        PhpReq phpReq = new PhpReq();
+        phpReq.sendRequest(getActivity(), request, new RequestHandler() {
+            @Override
+            public void processResponse(String resp) {
+                //TODO populate fragment: (set cardviews to => android:stateListAnimator="@null" => so cards dont peak through fragments)
+                JSONArray jsonArray;
+                try {
+                    jsonArray = new JSONArray(resp);
+                    //set up recyclerview so that it displays assignment cards
+                    GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2,RecyclerView.VERTICAL,false);
+                    recyclerView.setLayoutManager(gridLayoutManager);
+                    recyclerView.setHasFixedSize(true);
+                    //pass along array to adapter
+                    dashboardAdapter = new DashboardAdapter(getContext(),jsonArray);
+                    recyclerView.setAdapter(dashboardAdapter);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        //fetch assignments from db
+
+        //set refresh for dashboard => repopulate with cardviews
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                //TODO implement refreshing of cardviews
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
 
         return view;
     }

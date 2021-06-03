@@ -19,7 +19,7 @@
 14        android:allowBackup="true"
 14-->C:\Users\KIAN\Desktop\TaskMate\app\src\main\AndroidManifest.xml:8:9-35
 15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-15-->[androidx.core:core:1.3.1] C:\Users\KIAN\.gradle\caches\transforms-2\files-2.1\50f1ca78fbc1677adba959cd11a28334\core-1.3.1\AndroidManifest.xml:24:18-86
+15-->[androidx.core:core:1.5.0] C:\Users\KIAN\.gradle\caches\transforms-2\files-2.1\e4e60fa01183f8bb008117a464bbdf63\core-1.5.0\AndroidManifest.xml:24:18-86
 16        android:debuggable="true"
 17        android:extractNativeLibs="false"
 18        android:icon="@mipmap/ic_launcher"

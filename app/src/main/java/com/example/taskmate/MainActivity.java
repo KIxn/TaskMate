@@ -228,7 +228,7 @@ public class MainActivity extends AppCompatActivity {
                             if(arr.length() != 0){
                                 //email not found, so create user
                                 JSONObject jsonObject = arr.getJSONObject(0);
-                                if((email.equals(jsonObject.getString("EMAIL"))) && (pswd_hash.equals(jsonObject.getString("PSWD")))){
+                                if(((email).toLowerCase().equals(jsonObject.getString("EMAIL").toLowerCase())) && (pswd_hash.equals(jsonObject.getString("PSWD")))){
                                     bAuthorized = true;
                                     ////////////////////////////////save log in//////////////////////////
                                     if (chbrem.isChecked()){

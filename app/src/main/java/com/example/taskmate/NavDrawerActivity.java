@@ -55,7 +55,6 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
             navigationView.setCheckedItem(R.id.dashboardmnu);
         }
 
-
     }
 
     @Override
@@ -132,44 +131,14 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
         return true;
     }
 
+    //closes nav pane if opened & keeps selected menu item responsive to navigation changes
     @Override
     public void onBackPressed() {
         //checks stack frame of fragments
         int count = getSupportFragmentManager().getBackStackEntryCount();
-
+        //close menus if open
         if(drawerLayout.isDrawerOpen(GravityCompat.START)){
             drawerLayout.closeDrawer(GravityCompat.START);
-            //handle stack
-            if (count == 0) {
-                super.onBackPressed();
-                //additional code
-            } else {
-                getSupportFragmentManager().popBackStack();
-                if(count > 1){
-                    //used to update menu
-                    switch(Integer.parseInt(getSupportFragmentManager().getBackStackEntryAt(getSupportFragmentManager().getBackStackEntryCount()-2).getName())){
-                        case 0:
-                        navigationView.setCheckedItem(R.id.dashboardmnu);
-                        break;
-                        case 1:
-                        navigationView.setCheckedItem(R.id.announcementsmnu);
-                        break;
-                        case 2:
-                        navigationView.setCheckedItem(R.id.remindersmnu);
-                        break;
-                        case 3:
-                        navigationView.setCheckedItem(R.id.boardroommnu);
-                        break;
-                        case 4:
-                        navigationView.setCheckedItem(R.id.boredroommnu);
-                        break;
-                        default:
-                            throw new IllegalStateException("Unexpected value: " + Integer.parseInt(getSupportFragmentManager().getBackStackEntryAt(getSupportFragmentManager().getBackStackEntryCount() - 1).getName()));
-                    }
-                }else{
-                    navigationView.setCheckedItem(R.id.dashboardmnu);
-                }
-            }
         }
         else{
             //handle stack
@@ -181,7 +150,7 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
                 getSupportFragmentManager().popBackStack();
                 if(count > 1){
                     //used to update menu
-                    switch(Integer.parseInt(getSupportFragmentManager().getBackStackEntryAt(getSupportFragmentManager().getBackStackEntryCount()-2).getName())){
+                    switch(Integer.parseInt(getSupportFragmentManager().getBackStackEntryAt(count-2).getName())){
                         case 0:
                             navigationView.setCheckedItem(R.id.dashboardmnu);
                             break;
