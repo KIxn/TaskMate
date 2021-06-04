@@ -1658,6 +1658,7 @@ int drawable design_snackbar_background 0x7f070065
 int drawable ic_about 0x7f070066
 int drawable ic_additional 0x7f070067
 int drawable ic_announcment 0x7f070068
+int drawable ic_baseline_add_24 0x7f07009b
 int drawable ic_boardroom 0x7f070069
 int drawable ic_clock_black_24dp 0x7f07006a
 int drawable ic_dashboard 0x7f07006b
@@ -1780,6 +1781,7 @@ int id action_text 0x7f090043
 int id actions 0x7f090044
 int id activity_chooser_view_content 0x7f090045
 int id add 0x7f090046
+int id add_assignment 0x7f0901c6
 int id alertTitle 0x7f090047
 int id aligned 0x7f090048
 int id all 0x7f090049
@@ -2328,6 +2330,7 @@ int mipmap ic_launcher 0x7f0e0000
 int mipmap ic_launcher_foreground 0x7f0e0001
 int mipmap ic_launcher_round 0x7f0e0002
 int plurals mtrl_badge_content_description 0x7f0f0000
+int string ConfirmAssDelete 0x7f100068
 int string abc_action_bar_home_description 0x7f100000
 int string abc_action_bar_up_description 0x7f100001
 int string abc_action_menu_overflow_description 0x7f100002
@@ -2364,6 +2367,7 @@ int string character_counter_overflowed_content_description 0x7f100020
 int string character_counter_pattern 0x7f100021
 int string chip_text 0x7f100022
 int string clear_text_end_icon_content_description 0x7f100023
+int string createassignment 0x7f100067
 int string error_icon_content_description 0x7f100024
 int string exposed_dropdown_menu_content_description 0x7f100025
 int string fab_transformation_scrim_behavior 0x7f100026

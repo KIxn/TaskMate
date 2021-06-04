@@ -26,15 +26,15 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
 
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
-    private String USER_ID; private String PERM;
+    public static String USER_ID; public static String PERM;
     public static FragmentTransaction fragmentTransaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //initializations
-        String USER_ID = getIntent().getStringExtra("USER_ID");
-        String PERM = getIntent().getStringExtra("PERM");
+        USER_ID = getIntent().getStringExtra("USER_ID");
+        PERM = getIntent().getStringExtra("PERM");
 
         setContentView(R.layout.activity_nav_drawer);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawlt);

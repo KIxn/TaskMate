@@ -48,6 +48,10 @@
         "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
+        "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_add_24.xml.flat",
+        "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\drawable\\ic_baseline_add_24.xml"
+    },
+    {
         "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_additional.xml.flat",
         "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\drawable\\ic_additional.xml"
     },

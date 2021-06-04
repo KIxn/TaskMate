@@ -1659,6 +1659,7 @@ drawable design_snackbar_background
 drawable ic_about
 drawable ic_additional
 drawable ic_announcment
+drawable ic_baseline_add_24
 drawable ic_boardroom
 drawable ic_clock_black_24dp
 drawable ic_dashboard
@@ -1781,6 +1782,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_assignment
 id alertTitle
 id aligned
 id all
@@ -2329,6 +2331,7 @@ mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+string ConfirmAssDelete
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -2365,6 +2368,7 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string createassignment
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior

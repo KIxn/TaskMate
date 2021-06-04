@@ -4,5 +4,7 @@
     <string name="navigation_draw_close">Close Navigation Drawer</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="createassignment">CreateAssignment</string>
+    <string name="ConfirmAssDelete">Confirmation of Deletionion?</string>
 </resources>
 

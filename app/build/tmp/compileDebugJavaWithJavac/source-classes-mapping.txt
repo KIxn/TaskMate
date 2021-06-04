@@ -1,11 +1,17 @@
+com/example/taskmate/PhpReq.java
+ com.example.taskmate.PhpReq
+ com.example.taskmate.PhpReq$1
+ com.example.taskmate.PhpReq$1$1
+com/example/taskmate/BuildConfig.java
+ com.example.taskmate.BuildConfig
+com/example/taskmate/RequestHandler.java
+ com.example.taskmate.RequestHandler
 com/example/taskmate/RemindersFragment.java
  com.example.taskmate.RemindersFragment
-com/example/taskmate/NavDrawerActivity.java
- com.example.taskmate.NavDrawerActivity
-com/example/taskmate/DashboardFragment.java
- com.example.taskmate.DashboardFragment
- com.example.taskmate.DashboardFragment$1
- com.example.taskmate.DashboardFragment$2
+com/example/taskmate/BoardRoomFragment.java
+ com.example.taskmate.BoardRoomFragment
+com/example/taskmate/AnnouncementsFragment.java
+ com.example.taskmate.AnnouncementsFragment
 com/example/taskmate/MainActivity.java
  com.example.taskmate.MainActivity
  com.example.taskmate.MainActivity$1
@@ -16,21 +22,21 @@ com/example/taskmate/MainActivity.java
  com.example.taskmate.MainActivity$MyAsyncTask$1
  com.example.taskmate.MainActivity$MyAsyncTask$1$1
  com.example.taskmate.MainActivity$MyAsyncTask$1$2
-com/example/taskmate/BuildConfig.java
- com.example.taskmate.BuildConfig
+com/example/taskmate/AdditionalFragment.java
+ com.example.taskmate.AdditionalFragment
+com/example/taskmate/NavDrawerActivity.java
+ com.example.taskmate.NavDrawerActivity
+com/example/taskmate/DashboardFragment.java
+ com.example.taskmate.DashboardFragment
+ com.example.taskmate.DashboardFragment$1
+ com.example.taskmate.DashboardFragment$2
+com/example/taskmate/DeleteAssignmentDialogFrag.java
+ com.example.taskmate.DeleteAssignmentDialogFrag
+ com.example.taskmate.DeleteAssignmentDialogFrag$1
+ com.example.taskmate.DeleteAssignmentDialogFrag$2
+ com.example.taskmate.DeleteAssignmentDialogFrag$2$1
 com/example/taskmate/DashboardAdapter.java
  com.example.taskmate.DashboardAdapter
  com.example.taskmate.DashboardAdapter$DashboardViewHolder
  com.example.taskmate.DashboardAdapter$DashboardViewHolder$1
-com/example/taskmate/AdditionalFragment.java
- com.example.taskmate.AdditionalFragment
-com/example/taskmate/RequestHandler.java
- com.example.taskmate.RequestHandler
-com/example/taskmate/BoardRoomFragment.java
- com.example.taskmate.BoardRoomFragment
-com/example/taskmate/PhpReq.java
- com.example.taskmate.PhpReq
- com.example.taskmate.PhpReq$1
- com.example.taskmate.PhpReq$1$1
-com/example/taskmate/AnnouncementsFragment.java
- com.example.taskmate.AnnouncementsFragment
+ com.example.taskmate.DashboardAdapter$DashboardViewHolder$2
