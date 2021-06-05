@@ -1804,6 +1804,7 @@ int id boardroommnu 0x7f090059
 int id boredroommnu 0x7f09005a
 int id bottom 0x7f09005b
 int id bounce 0x7f09005c
+int id btnsetDueDate 0x7f0901cb
 int id buttonPanel 0x7f09005d
 int id cache_measures 0x7f09005e
 int id cancel_action 0x7f09005f
@@ -2147,6 +2148,10 @@ int id transition_transform 0x7f0901b0
 int id triangle 0x7f0901b1
 int id txtAssignment 0x7f0901b2
 int id txtDate 0x7f0901b3
+int id txtassCancel 0x7f0901c7
+int id txtassDesc 0x7f0901c8
+int id txtassName 0x7f0901c9
+int id txtassOk 0x7f0901ca
 int id txtemail 0x7f0901b4
 int id txtpswd 0x7f0901b5
 int id unchecked 0x7f0901b6
@@ -2248,6 +2253,7 @@ int layout design_navigation_menu 0x7f0c002f
 int layout design_navigation_menu_item 0x7f0c0030
 int layout design_text_input_end_icon 0x7f0c0031
 int layout design_text_input_start_icon 0x7f0c0032
+int layout dialogaddass 0x7f0c0080
 int layout material_chip_input_combo 0x7f0c0033
 int layout material_clock_display 0x7f0c0034
 int layout material_clock_display_divider 0x7f0c0035

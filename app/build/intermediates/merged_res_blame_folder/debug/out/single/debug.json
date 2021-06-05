@@ -68,6 +68,10 @@
         "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\drawable\\ic_about.xml"
     },
     {
+        "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialogaddass.xml.flat",
+        "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\layout\\dialogaddass.xml"
+    },
+    {
         "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\anim_exit_to_right.xml.flat",
         "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\anim\\exit_to_right.xml"
     },

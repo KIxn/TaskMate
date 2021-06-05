@@ -115,7 +115,22 @@ public class DashboardFragment extends Fragment {
         //initialize
         swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.dashboard_refresh_layout);
         recyclerView = (RecyclerView) view.findViewById(R.id.dash_recycler);
-        addAssignmentbtn = (FloatingActionButton) view.findViewById(R.id.add_assignment);//TODO add assignment if lect
+        addAssignmentbtn = (FloatingActionButton) view.findViewById(R.id.add_assignment);
+        //handle Behaviour of Dialogue Creation
+        if(NavDrawerActivity.PERM.equals("LECT")){
+            addAssignmentbtn.show();
+            addAssignmentbtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(getContext(), "Add Ass", Toast.LENGTH_SHORT).show();
+                    //TODO add assignment if lect
+                    new AddAssDialogFrag().show(childFragmentManager,"CREATING ASSIGNMENT");
+                }
+            });
+        }
+        else{
+            addAssignmentbtn.hide();
+        }
         //set child frag manager for dialogs
         childFragmentManager = getChildFragmentManager();
         //method to populate recyclerview

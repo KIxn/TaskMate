@@ -1805,6 +1805,7 @@ id boardroommnu
 id boredroommnu
 id bottom
 id bounce
+id btnsetDueDate
 id buttonPanel
 id cache_measures
 id cancel_action
@@ -2148,6 +2149,10 @@ id transition_transform
 id triangle
 id txtAssignment
 id txtDate
+id txtassCancel
+id txtassDesc
+id txtassName
+id txtassOk
 id txtemail
 id txtpswd
 id unchecked
@@ -2249,6 +2254,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialogaddass
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
