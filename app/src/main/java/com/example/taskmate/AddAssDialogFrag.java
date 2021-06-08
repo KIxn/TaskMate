@@ -99,9 +99,6 @@ public class AddAssDialogFrag extends DialogFragment {
                         break;
                 }
                 date = String.valueOf(dayOfMonth) + " " + smonth + " " + String.valueOf(year);
-                System.out.println("///////////////////////////////////////////////////////////////////////");
-                System.out.println(date);
-                System.out.println("////////////////////////////////////////////////////////////////////////");
             }
         };
 

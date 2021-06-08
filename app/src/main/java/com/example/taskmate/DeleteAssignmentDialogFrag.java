@@ -54,7 +54,7 @@ public class DeleteAssignmentDialogFrag extends DialogFragment {
                                 alertDialog.show();
                             }
                         });
-
+                        //TODO handle group deletion
                         progressDialog.dismiss();
                     }
                 })

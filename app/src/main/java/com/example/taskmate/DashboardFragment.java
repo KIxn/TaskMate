@@ -122,8 +122,6 @@ public class DashboardFragment extends Fragment {
             addAssignmentbtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(getContext(), "Add Ass", Toast.LENGTH_SHORT).show();
-                    //TODO add assignment if lect
                     new AddAssDialogFrag().show(childFragmentManager,"CREATING ASSIGNMENT");
                 }
             });

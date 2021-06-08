@@ -19,7 +19,8 @@
             android:layout_height="?attr/actionBarSize"
             android:elevation="4dp"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"/>
 
         <FrameLayout
             android:id="@+id/frag_container"

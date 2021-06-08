@@ -84,6 +84,10 @@
         "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\layout\\board_room_fragment.xml"
     },
     {
+        "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_student_assignment.xml.flat",
+        "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\layout\\fragment_student_assignment.xml"
+    },
+    {
         "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_delete.xml.flat",
         "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\drawable\\ic_delete.xml"
     },

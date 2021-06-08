@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
@@ -20,13 +21,13 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
     //variables
     private Context context;
     private JSONArray jsonArray;
-    private FragmentManager dialogFragmentManager;
+    private static FragmentManager subFragmentManager;
 
     //constructor
-    public DashboardAdapter(@NotNull Context context,@NotNull JSONArray jsonArray,FragmentManager dialogFragmentManager){
+    public DashboardAdapter(@NotNull Context context,@NotNull JSONArray jsonArray,FragmentManager subFragmentManager){
         this.context = context;
         this.jsonArray = jsonArray;
-        this.dialogFragmentManager = dialogFragmentManager;
+        this.subFragmentManager = subFragmentManager;
     }
 
     @NonNull
@@ -34,7 +35,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
     @Override
     public DashboardViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(context).inflate(R.layout.assignment_card,parent,false);
-        return new DashboardViewHolder(v,dialogFragmentManager);
+        return new DashboardViewHolder(v, subFragmentManager);
     }
 
     @Override
@@ -44,6 +45,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
             holder.txtAss.setText(jsonArray.getJSONObject(position).getString("ASS_NAME"));
             holder.txtDate.setText(jsonArray.getJSONObject(position).getString("DUE_DATETIME"));
             holder.setViewcreator_ID(String.valueOf(jsonArray.getJSONObject(position).getInt("CREATOR_ID")));
+            holder.setAss_ID(jsonArray.getJSONObject(position).getString("ASS_ID"));
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -59,6 +61,11 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
         TextView txtAss;
         TextView txtDate;
         private String viewcreator_ID;
+        private String Ass_ID;
+
+        public void setAss_ID(String ass_ID) {
+            Ass_ID = ass_ID;
+        }
 
         public void setViewcreator_ID(String viewcreator_ID) {
             this.viewcreator_ID = viewcreator_ID;//works
@@ -76,7 +83,18 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
                 @Override
                 public void onClick(View v) {
                     //TODO ONCLICKS for Assignment cards
-                    Toast.makeText(v.getContext(), txtAss.getText().toString(), Toast.LENGTH_SHORT).show();
+                    if(NavDrawerActivity.PERM.equals("STUD")){
+                        //if user is a student display student assignment view
+                        //TODO code up STUD assignment page
+                        //create frag and pass Ass_ID
+                        new StudentAssignmentDialogFrag().show(
+                                dialogFragmentManager,Ass_ID
+                        );
+                    }
+                    else{
+                        //show lecturer assignment view
+                        //TODO code up LECT assignment page
+                    }
                 }
             });
 

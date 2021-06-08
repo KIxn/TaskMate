@@ -1724,6 +1724,8 @@ id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
+id StudAssLoading
+id StudAssToolbar
 id TOP_END
 id TOP_START
 id aboutmnu
@@ -1939,6 +1941,7 @@ id logbtn
 id loginbck
 id loginlt
 id logoutmnu
+id markIndicator
 id masked
 id material_clock_display
 id material_clock_face
@@ -2149,6 +2152,9 @@ id transition_transform
 id triangle
 id txtAssignment
 id txtDate
+id txtStudAssMark
+id txtStudAssName
+id txtStudGroupName
 id txtassCancel
 id txtassDesc
 id txtassName
@@ -2255,6 +2261,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialogaddass
+layout fragment_student_assignment
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
