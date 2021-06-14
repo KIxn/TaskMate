@@ -40,6 +40,7 @@ public class StudentAssignmentDialogFrag extends DialogFragment {
     private Button btnCreate,btnLeave,btnJoin,btnAddGroup;
     RelativeLayout AddGrouplt;
     View view;
+    private String group_id;
 
     @Override
     public void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
@@ -76,7 +77,7 @@ public class StudentAssignmentDialogFrag extends DialogFragment {
                 AddGrouplt.setVisibility(View.VISIBLE);
             }
         });
-
+        //onclick to add group
         btnAddGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,6 +106,30 @@ public class StudentAssignmentDialogFrag extends DialogFragment {
                         }
                     });
                 }
+            }
+        });
+
+        btnLeave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //set components for request
+                HttpUrl httpUrl = new HttpUrl.Builder()
+                        .scheme("https")
+                        .host("lamp.ms.wits.ac.za").addPathSegment("home").addPathSegment("s2307935").addPathSegment("leaveGroup.php")
+                        .addQueryParameter("group_id",group_id).addQueryParameter("stud_id",NavDrawerActivity.USER_ID)
+                        .build();
+                Request request = new Request.Builder()
+                        .url(httpUrl)
+                        .get()
+                        .build();
+                PhpReq phpReq = new PhpReq();
+                phpReq.sendRequest(getActivity(), request, new RequestHandler() {
+                    @Override
+                    public void processResponse(String resp) {
+                        Toast.makeText(getActivity(), resp, Toast.LENGTH_LONG).show();
+                        getDialog().dismiss();
+                    }
+                });
             }
         });
 
@@ -160,6 +185,7 @@ public class StudentAssignmentDialogFrag extends DialogFragment {
                     txtMark.setText(txtMark.getText().toString() + jsonObject.getString("MARK") + "/100");
                     txtDesc.setText(jsonObject.getString("ASS_DESC"));
                     txtDate.setText("ASSIGNMENT DUE: "+jsonObject.getString("ASS_DUE"));
+                    group_id = jsonObject.getString("GROUP_ID");
                     circularProgressIndicator.setProgressCompat(Integer.parseInt(jsonObject.getString("MARK")),true);
 
                     //show stuff

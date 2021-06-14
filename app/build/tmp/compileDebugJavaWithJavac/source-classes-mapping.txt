@@ -49,6 +49,8 @@ com/example/taskmate/StudentAssignmentDialogFrag.java
  com.example.taskmate.StudentAssignmentDialogFrag$2
  com.example.taskmate.StudentAssignmentDialogFrag$2$1
  com.example.taskmate.StudentAssignmentDialogFrag$3
+ com.example.taskmate.StudentAssignmentDialogFrag$3$1
+ com.example.taskmate.StudentAssignmentDialogFrag$4
  com.example.taskmate.StudentAssignmentDialogFrag$handleUI
 com/example/taskmate/DashboardAdapter.java
  com.example.taskmate.DashboardAdapter
