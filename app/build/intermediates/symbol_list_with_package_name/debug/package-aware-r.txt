@@ -1725,6 +1725,7 @@ id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
 id StudAssLoading
+id StudAssLt
 id StudAssToolbar
 id TOP_END
 id TOP_START
@@ -1807,6 +1808,10 @@ id boardroommnu
 id boredroommnu
 id bottom
 id bounce
+id btnAddGroup
+id btnCreate
+id btnJoin
+id btnLeave
 id btnsetDueDate
 id buttonPanel
 id cache_measures
@@ -2001,6 +2006,7 @@ id nav_view
 id navigation_header_container
 id navtoolbar
 id never
+id newgrplt
 id noScroll
 id none
 id normal
@@ -2098,6 +2104,7 @@ id staticPostLayout
 id status_bar_latest_event_content
 id stop
 id stretch
+id studassdesc
 id submenuarrow
 id submit_area
 id tabMode
@@ -2152,6 +2159,8 @@ id transition_transform
 id triangle
 id txtAssignment
 id txtDate
+id txtGroupDesc
+id txtGroupName
 id txtStudAssMark
 id txtStudAssName
 id txtStudGroupName
@@ -2159,6 +2168,7 @@ id txtassCancel
 id txtassDesc
 id txtassName
 id txtassOk
+id txtdate
 id txtemail
 id txtpswd
 id unchecked

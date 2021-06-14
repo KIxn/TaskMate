@@ -20,9 +20,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:id="@+id/StudAssLt"
+        >
 
         <TextView
+            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/txtStudAssName"
@@ -42,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="30dp"
-                android:layout_marginHorizontal="75dp"
+                android:layout_marginHorizontal="55dp"
                 android:indeterminate="true"
                 app:indicatorColor="#00E317"
                 app:indicatorSize="75dp"
@@ -59,13 +62,15 @@
                 android:paddingTop="25dp">
 
                 <TextView
-                    android:layout_marginVertical="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtStudAssMark"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/black"
-                    android:text="Mark: "/>
+                    android:text="Mark: "
+                    android:textSize="15sp"/>
 
                 <TextView
                     android:layout_marginVertical="5dp"
@@ -75,11 +80,125 @@
                     android:id="@+id/txtStudGroupName"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/black"
-                    android:text="Group Name: "/>
+                    android:text="Group Name: "
+                    android:textSize="15sp"/>
 
             </LinearLayout>
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Project Description:"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/studassdesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnLeave"
+                android:text="Leave Group"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:layout_margin="50dp"/>
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnCreate"
+                android:text="Create Group"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:layout_margin="50dp"/>
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnJoin"
+                android:text="Join Group"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:layout_margin="50dp"/>
+
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/newgrplt"
+                android:padding="10dp"
+                android:visibility="gone">
+                <!--Section for creating a new Group-->
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="180dp"
+                    android:hint="Enter Group Name"
+                    android:id="@+id/txtGroupName"
+                    android:layout_centerHorizontal="true"/>
+
+                <EditText
+                    android:layout_below="@+id/txtGroupName"
+                    android:minWidth="180dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginHorizontal="50dp"
+                    android:hint="Enter Group Description"
+                    android:inputType="textMultiLine"
+                    android:minLines="2"
+                    android:maxLines="12"
+                    android:lines="4"
+                    android:scrollbars="vertical"
+                    android:id="@+id/txtGroupDesc"
+                    android:layout_margin="15dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/txtGroupDesc"
+                    android:text="Submit"
+                    android:id="@+id/btnAddGroup"
+                    />
+            </RelativeLayout>
+
+        </ScrollView>
     </LinearLayout>
 
     <com.google.android.material.progressindicator.CircularProgressIndicator

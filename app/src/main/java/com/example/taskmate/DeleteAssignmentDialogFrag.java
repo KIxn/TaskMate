@@ -37,11 +37,13 @@ public class DeleteAssignmentDialogFrag extends DialogFragment {
                         progressDialog.show();
                         Context context = getContext();
 
+                        Toast.makeText(context, getTag(), Toast.LENGTH_LONG).show();
+
                         HttpUrl url = new HttpUrl.Builder()
                                 .scheme("https")
                                 .host("lamp.ms.wits.ac.za")
                                 .addPathSegment("home").addPathSegment("s2307935").addPathSegment("deleteAss.php")
-                                .addQueryParameter("ASS_NAME",getTag()).build();
+                                .addQueryParameter("ass_name",getTag()).build();
                         Request request = new Request.Builder()
                                 .url(url).get().build();
                         PhpReq phpReq = new PhpReq();

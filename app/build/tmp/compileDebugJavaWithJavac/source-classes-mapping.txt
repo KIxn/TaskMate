@@ -37,17 +37,21 @@ com/example/taskmate/DeleteAssignmentDialogFrag.java
  com.example.taskmate.DeleteAssignmentDialogFrag$1
  com.example.taskmate.DeleteAssignmentDialogFrag$2
  com.example.taskmate.DeleteAssignmentDialogFrag$2$1
+com/example/taskmate/AnnouncementsFragment.java
+ com.example.taskmate.AnnouncementsFragment
+com/example/taskmate/BoardRoomFragment.java
+ com.example.taskmate.BoardRoomFragment
+com/example/taskmate/AdditionalFragment.java
+ com.example.taskmate.AdditionalFragment
 com/example/taskmate/StudentAssignmentDialogFrag.java
  com.example.taskmate.StudentAssignmentDialogFrag
  com.example.taskmate.StudentAssignmentDialogFrag$1
+ com.example.taskmate.StudentAssignmentDialogFrag$2
+ com.example.taskmate.StudentAssignmentDialogFrag$2$1
+ com.example.taskmate.StudentAssignmentDialogFrag$3
+ com.example.taskmate.StudentAssignmentDialogFrag$handleUI
 com/example/taskmate/DashboardAdapter.java
  com.example.taskmate.DashboardAdapter
  com.example.taskmate.DashboardAdapter$DashboardViewHolder
  com.example.taskmate.DashboardAdapter$DashboardViewHolder$1
  com.example.taskmate.DashboardAdapter$DashboardViewHolder$2
-com/example/taskmate/AdditionalFragment.java
- com.example.taskmate.AdditionalFragment
-com/example/taskmate/BoardRoomFragment.java
- com.example.taskmate.BoardRoomFragment
-com/example/taskmate/AnnouncementsFragment.java
- com.example.taskmate.AnnouncementsFragment

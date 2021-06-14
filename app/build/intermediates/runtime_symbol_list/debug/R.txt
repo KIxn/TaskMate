@@ -1724,6 +1724,7 @@ int id SHOW_PATH 0x7f09000a
 int id SHOW_PROGRESS 0x7f09000b
 int id SYM 0x7f09000c
 int id StudAssLoading 0x7f0901d1
+int id StudAssLt 0x7f0901d2
 int id StudAssToolbar 0x7f09000d
 int id TOP_END 0x7f09000e
 int id TOP_START 0x7f09000f
@@ -1806,6 +1807,10 @@ int id boardroommnu 0x7f09005b
 int id boredroommnu 0x7f09005c
 int id bottom 0x7f09005d
 int id bounce 0x7f09005e
+int id btnAddGroup 0x7f0901d7
+int id btnCreate 0x7f0901d4
+int id btnJoin 0x7f0901d8
+int id btnLeave 0x7f0901d5
 int id btnsetDueDate 0x7f09005f
 int id buttonPanel 0x7f090060
 int id cache_measures 0x7f090061
@@ -2000,6 +2005,7 @@ int id nav_view 0x7f09011d
 int id navigation_header_container 0x7f09011e
 int id navtoolbar 0x7f09011f
 int id never 0x7f090120
+int id newgrplt 0x7f0901d9
 int id noScroll 0x7f090121
 int id none 0x7f090122
 int id normal 0x7f090123
@@ -2097,6 +2103,7 @@ int id staticPostLayout 0x7f09017e
 int id status_bar_latest_event_content 0x7f09017f
 int id stop 0x7f090180
 int id stretch 0x7f090181
+int id studassdesc 0x7f0901d3
 int id submenuarrow 0x7f090182
 int id submit_area 0x7f090183
 int id tabMode 0x7f090184
@@ -2151,6 +2158,8 @@ int id transition_transform 0x7f0901b4
 int id triangle 0x7f0901b5
 int id txtAssignment 0x7f0901b6
 int id txtDate 0x7f0901b7
+int id txtGroupDesc 0x7f0901da
+int id txtGroupName 0x7f0901db
 int id txtStudAssMark 0x7f0901b8
 int id txtStudAssName 0x7f0901b9
 int id txtStudGroupName 0x7f0901ba
@@ -2158,6 +2167,7 @@ int id txtassCancel 0x7f0901bb
 int id txtassDesc 0x7f0901bc
 int id txtassName 0x7f0901bd
 int id txtassOk 0x7f0901be
+int id txtdate 0x7f0901d6
 int id txtemail 0x7f0901bf
 int id txtpswd 0x7f0901c0
 int id unchecked 0x7f0901c1
