@@ -3,10 +3,21 @@ package com.example.taskmate;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import okhttp3.HttpUrl;
+import okhttp3.Request;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,12 +66,73 @@ public class AnnouncementsFragment extends Fragment {
         }
     }
 
+    //views to use
+    private SwipeRefreshLayout swipeRefreshLayout;
+    private FloatingActionButton fab;
+    private RecyclerView recyclerView;
+    private AnnouncementsAdapter announcementsAdapter;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.announcements_fragment, container, false);
-        //TODO add refreshlayout and populate
+        swipeRefreshLayout = view.findViewById(R.id.announceswipelt);
+        fab = view.findViewById(R.id.add_announcement);
+        recyclerView = view.findViewById(R.id.Announcements_recucler);
+
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(requireContext(),1,GridLayoutManager.VERTICAL,false);
+        recyclerView.setLayoutManager(gridLayoutManager);
+        recyclerView.setHasFixedSize(true);
+        populateCards();
+
+        if(NavDrawerActivity.PERM.equals("LECT")){
+            fab.setVisibility(View.VISIBLE);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //TODO create new announcement dialogue
+                    new AddAnnDialogFrag().show(
+                            getChildFragmentManager(),"Making Dialog"
+                    );
+                }
+            });
+        }else{
+            fab.setVisibility(View.GONE);
+        }
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                populateCards();
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
+
         return view;
+    }
+
+    private void populateCards() {
+        HttpUrl url = new HttpUrl.Builder()
+                .scheme("https")
+                .host("lamp.ms.wits.ac.za").addPathSegment("home").addPathSegment("s2307935").addPathSegment("getAnnouncements.php")
+                .build();
+        Request request = new Request.Builder()
+                .url(url)
+                .get()
+                .build();
+        PhpReq phpReq = new PhpReq();
+        phpReq.sendRequest(requireActivity(), request, new RequestHandler() {
+            @Override
+            public void processResponse(String resp) {
+                try {
+                    JSONArray jsonArray = new JSONArray(resp);
+                    announcementsAdapter = new AnnouncementsAdapter(requireContext(),jsonArray,getChildFragmentManager());
+                    recyclerView.setAdapter(announcementsAdapter);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 }

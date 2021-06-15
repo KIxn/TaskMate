@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\layout_announcement_card.xml.flat",
+        "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\layout\\announcement_card.xml"
+    },
+    {
         "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
@@ -10,6 +14,10 @@
     {
         "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_drawer.xml.flat",
         "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\menu\\menu_drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\layout_join_group_row.xml.flat",
+        "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\layout\\join_group_row.xml"
     },
     {
         "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_logout.xml.flat",
@@ -30,6 +38,10 @@
     {
         "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_reminder.xml.flat",
         "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\drawable\\ic_reminder.xml"
+    },
+    {
+        "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\layout_addann_layout.xml.flat",
+        "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\layout\\addann_layout.xml"
     },
     {
         "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\font_roboto_bold.ttf.flat",
@@ -70,6 +82,10 @@
     {
         "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialogaddass.xml.flat",
         "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\layout\\dialogaddass.xml"
+    },
+    {
+        "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_lect_assignment.xml.flat",
+        "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\layout\\fragment_lect_assignment.xml"
     },
     {
         "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\anim_exit_to_right.xml.flat",

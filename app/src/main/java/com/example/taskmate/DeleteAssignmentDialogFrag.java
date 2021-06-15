@@ -37,8 +37,6 @@ public class DeleteAssignmentDialogFrag extends DialogFragment {
                         progressDialog.show();
                         Context context = getContext();
 
-                        Toast.makeText(context, getTag(), Toast.LENGTH_LONG).show();
-
                         HttpUrl url = new HttpUrl.Builder()
                                 .scheme("https")
                                 .host("lamp.ms.wits.ac.za")
@@ -56,7 +54,6 @@ public class DeleteAssignmentDialogFrag extends DialogFragment {
                                 alertDialog.show();
                             }
                         });
-                        //TODO handle group deletion
                         progressDialog.dismiss();
                     }
                 })

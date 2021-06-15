@@ -8,8 +8,10 @@ com/example/taskmate/BuildConfig.java
  com.example.taskmate.BuildConfig
 com/example/taskmate/RemindersFragment.java
  com.example.taskmate.RemindersFragment
-com/example/taskmate/NavDrawerActivity.java
- com.example.taskmate.NavDrawerActivity
+com/example/taskmate/AnnouncementsAdapter.java
+ com.example.taskmate.AnnouncementsAdapter
+ com.example.taskmate.AnnouncementsAdapter$AnnounceViewHolder
+ com.example.taskmate.AnnouncementsAdapter$AnnounceViewHolder$1
 com/example/taskmate/AddAssDialogFrag.java
  com.example.taskmate.AddAssDialogFrag
  com.example.taskmate.AddAssDialogFrag$1
@@ -17,11 +19,6 @@ com/example/taskmate/AddAssDialogFrag.java
  com.example.taskmate.AddAssDialogFrag$3
  com.example.taskmate.AddAssDialogFrag$4
  com.example.taskmate.AddAssDialogFrag$4$1
-com/example/taskmate/DashboardFragment.java
- com.example.taskmate.DashboardFragment
- com.example.taskmate.DashboardFragment$1
- com.example.taskmate.DashboardFragment$2
- com.example.taskmate.DashboardFragment$3
 com/example/taskmate/MainActivity.java
  com.example.taskmate.MainActivity
  com.example.taskmate.MainActivity$1
@@ -32,17 +29,18 @@ com/example/taskmate/MainActivity.java
  com.example.taskmate.MainActivity$MyAsyncTask$1
  com.example.taskmate.MainActivity$MyAsyncTask$1$1
  com.example.taskmate.MainActivity$MyAsyncTask$1$2
+com/example/taskmate/BoardRoomFragment.java
+ com.example.taskmate.BoardRoomFragment
+com/example/taskmate/DashboardFragment.java
+ com.example.taskmate.DashboardFragment
+ com.example.taskmate.DashboardFragment$1
+ com.example.taskmate.DashboardFragment$2
+ com.example.taskmate.DashboardFragment$3
 com/example/taskmate/DeleteAssignmentDialogFrag.java
  com.example.taskmate.DeleteAssignmentDialogFrag
  com.example.taskmate.DeleteAssignmentDialogFrag$1
  com.example.taskmate.DeleteAssignmentDialogFrag$2
  com.example.taskmate.DeleteAssignmentDialogFrag$2$1
-com/example/taskmate/AnnouncementsFragment.java
- com.example.taskmate.AnnouncementsFragment
-com/example/taskmate/BoardRoomFragment.java
- com.example.taskmate.BoardRoomFragment
-com/example/taskmate/AdditionalFragment.java
- com.example.taskmate.AdditionalFragment
 com/example/taskmate/StudentAssignmentDialogFrag.java
  com.example.taskmate.StudentAssignmentDialogFrag
  com.example.taskmate.StudentAssignmentDialogFrag$1
@@ -51,9 +49,42 @@ com/example/taskmate/StudentAssignmentDialogFrag.java
  com.example.taskmate.StudentAssignmentDialogFrag$3
  com.example.taskmate.StudentAssignmentDialogFrag$3$1
  com.example.taskmate.StudentAssignmentDialogFrag$4
+ com.example.taskmate.StudentAssignmentDialogFrag$4$1
+ com.example.taskmate.StudentAssignmentDialogFrag$5
+ com.example.taskmate.StudentAssignmentDialogFrag$5$1
+ com.example.taskmate.StudentAssignmentDialogFrag$6
+ com.example.taskmate.StudentAssignmentDialogFrag$ListAdapter
  com.example.taskmate.StudentAssignmentDialogFrag$handleUI
+com/example/taskmate/NavDrawerActivity.java
+ com.example.taskmate.NavDrawerActivity
 com/example/taskmate/DashboardAdapter.java
  com.example.taskmate.DashboardAdapter
  com.example.taskmate.DashboardAdapter$DashboardViewHolder
  com.example.taskmate.DashboardAdapter$DashboardViewHolder$1
  com.example.taskmate.DashboardAdapter$DashboardViewHolder$2
+com/example/taskmate/AdditionalFragment.java
+ com.example.taskmate.AdditionalFragment
+com/example/taskmate/DeleteAnnounceDialog.java
+ com.example.taskmate.DeleteAnnounceDialog
+ com.example.taskmate.DeleteAnnounceDialog$1
+ com.example.taskmate.DeleteAnnounceDialog$2
+ com.example.taskmate.DeleteAnnounceDialog$2$1
+com/example/taskmate/LectAssDialogFrag.java
+ com.example.taskmate.LectAssDialogFrag
+ com.example.taskmate.LectAssDialogFrag$1
+ com.example.taskmate.LectAssDialogFrag$2
+ com.example.taskmate.LectAssDialogFrag$3
+ com.example.taskmate.LectAssDialogFrag$3$1
+ com.example.taskmate.LectAssDialogFrag$4
+ com.example.taskmate.LectAssDialogFrag$ListAdapter
+ com.example.taskmate.LectAssDialogFrag$setList
+com/example/taskmate/AddAnnDialogFrag.java
+ com.example.taskmate.AddAnnDialogFrag
+ com.example.taskmate.AddAnnDialogFrag$1
+ com.example.taskmate.AddAnnDialogFrag$1$1
+ com.example.taskmate.AddAnnDialogFrag$2
+com/example/taskmate/AnnouncementsFragment.java
+ com.example.taskmate.AnnouncementsFragment
+ com.example.taskmate.AnnouncementsFragment$1
+ com.example.taskmate.AnnouncementsFragment$2
+ com.example.taskmate.AnnouncementsFragment$3

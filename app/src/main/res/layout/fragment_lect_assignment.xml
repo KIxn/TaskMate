@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".StudentAssignmentDialogFrag">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="2dp"
+        app:title="Assignment Mark Adjustment Utility"
+        style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
+        android:layout_marginBottom="10dp"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        android:id="@+id/LectAssToolbar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Select A Group to Adjust the Given Mark:"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:id="@+id/MarkAdjlt"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:animateLayoutChanges="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="test 1"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:id="@+id/txtlectgrpnm"
+                android:layout_marginBottom="5dp"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"/>
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                app:indicatorColor="#00E317"
+                app:indicatorSize="75dp"
+                android:id="@+id/LectMarkIndicator"
+                app:trackColor="#969696"
+                android:layout_weight="1"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txtlectgrpnm"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mark/100"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:id="@+id/txtlectgrpmk"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/LectMarkIndicator"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:id="@+id/justtoshake">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Mark below then click 'Submit'"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textAlignment="center"
+                android:layout_marginBottom="3dp"
+                android:id="@+id/txtbals"
+                android:layout_centerHorizontal="true"/>
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter mark:"
+                android:fontFamily="@font/roboto_regular"
+                android:id="@+id/edtLectNewMark"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txtbals"
+                android:inputType="number"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:id="@+id/btnSubmitNewMark"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/edtLectNewMark"
+                android:elevation="5dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textAlignment="center"
+            android:text="Select Group -> To Edit Mark"
+            android:layout_marginBottom="6dp"
+            android:id="@+id/txtselectinfo"
+            android:layout_centerHorizontal="true"/>
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:indeterminate="true"
+            android:id="@+id/loadingindicator"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/groupslist"
+            android:layout_below="@+id/txtselectinfo"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

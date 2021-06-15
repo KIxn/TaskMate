@@ -93,7 +93,9 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
                     }
                     else{
                         //show lecturer assignment view
-                        //TODO code up LECT assignment page
+                        new LectAssDialogFrag().show(
+                                dialogFragmentManager,Ass_ID
+                        );
                     }
                 }
             });

@@ -1,12 +1,17 @@
 package com.example.taskmate;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +29,10 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import okhttp3.FormBody;
 import okhttp3.HttpUrl;
@@ -38,9 +47,12 @@ public class StudentAssignmentDialogFrag extends DialogFragment {
     private EditText edtGrpName,edtGrpDesc;
     private LinearLayout ContentLayout;
     private Button btnCreate,btnLeave,btnJoin,btnAddGroup;
+    private ListView listView;
     RelativeLayout AddGrouplt;
+    LinearLayout JoinGrouplt;
     View view;
     private String group_id;
+    JSONArray groupls;
 
     @Override
     public void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
@@ -69,6 +81,8 @@ public class StudentAssignmentDialogFrag extends DialogFragment {
         edtGrpDesc = view.findViewById(R.id.txtGroupDesc);
         edtGrpName = view.findViewById(R.id.txtGroupName);
         AddGrouplt = view.findViewById(R.id.newgrplt);
+        JoinGrouplt = view.findViewById(R.id.joingrplt);
+        listView = view.findViewById(R.id.grouplist);
 
         //create groups
         btnCreate.setOnClickListener(new View.OnClickListener() {
@@ -81,6 +95,7 @@ public class StudentAssignmentDialogFrag extends DialogFragment {
         btnAddGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                JoinGrouplt.setVisibility(View.GONE);
                 String grpName = edtGrpName.getText().toString();
                 String grpDesc = edtGrpDesc.getText().toString();
 
@@ -134,6 +149,87 @@ public class StudentAssignmentDialogFrag extends DialogFragment {
         });
 
         //TODO makebutton reactions
+        //set join group --> show list
+        btnJoin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AddGrouplt.setVisibility(View.GONE);
+                //get data from server
+                HttpUrl httpUrl = new HttpUrl.Builder()
+                        .scheme("https")
+                        .host("lamp.ms.wits.ac.za").addPathSegment("home").addPathSegment("s2307935").addPathSegment("getGroups.php")
+                        .addQueryParameter("ass_id",getTag())
+                        .build();
+                Request request = new Request.Builder()
+                        .url(httpUrl)
+                        .get()
+                        .build();
+                PhpReq phpReq = new PhpReq();
+                phpReq.sendRequest(getActivity(), request, new RequestHandler() {
+                    @Override
+                    public void processResponse(String resp) {
+                        try {
+                            groupls = new JSONArray(resp);
+                            //populate list
+                            if(groupls.length() > 0){
+                                ArrayList<String> names = new ArrayList<>();
+                                ArrayList<String> desc = new ArrayList<String>();
+
+                                for(int i = 0; i < groupls.length();i++){
+                                    names.add(groupls.getJSONObject(i).getString("GROUP_NAME"));
+                                    desc.add(groupls.getJSONObject(i).getString("GROUP_DESC"));
+                                }
+                                //convert to String[]
+
+
+
+                                ListAdapter listAdapter = new ListAdapter(requireActivity(),names,desc);//not calling listadapter
+                                listView.setAdapter(listAdapter);
+                            }
+                            else{
+                              TextView txtInfo = view.findViewById(R.id.txtgrouplistinfo);
+                              txtInfo.setText("No Groups Available To Join -> Please 'Create' a group or ask your group leader to do so...");
+                            }
+                        }catch (Exception e){
+                            e.printStackTrace();
+                        }
+                    }
+                });
+
+                JoinGrouplt.setVisibility(View.VISIBLE);
+            }
+        });
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //add user to group
+                HttpUrl httpUrl = new HttpUrl.Builder()
+                        .scheme("https")
+                        .host("lamp.ms.wits.ac.za").addPathSegment("home").addPathSegment("s2307935").addPathSegment("addUserToGroup.php")
+                        .build();
+                try {
+                    RequestBody requestBody = new FormBody.Builder()
+                            .add("group_id",groupls.getJSONObject(position).getString("GROUP_ID")).add("stud_id",NavDrawerActivity.USER_ID)
+                            .build();
+                    Request request = new Request.Builder()
+                            .url(httpUrl)
+                            .post(requestBody)
+                            .build();
+                    PhpReq phpReq = new PhpReq();
+                    phpReq.sendRequest(requireActivity(), request, new RequestHandler() {
+                        @Override
+                        public void processResponse(String resp) {
+                            Toast.makeText(requireActivity(), resp, Toast.LENGTH_LONG).show();
+                            getDialog().dismiss();
+                        }
+                    });
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 
         //set back button
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -147,8 +243,6 @@ public class StudentAssignmentDialogFrag extends DialogFragment {
                 }
             }
         });
-
-        //TODO complete student assignment view has Ass_id as TAG
         //component for internet requests
         PhpReq phpReq = new PhpReq();
         //get group details, check if student is in group
@@ -202,6 +296,33 @@ public class StudentAssignmentDialogFrag extends DialogFragment {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    class ListAdapter extends ArrayAdapter<String>{
+        Activity context;
+        ArrayList<String> names;
+        ArrayList<String> Desc;
+
+        ListAdapter(Activity activity,ArrayList<String> Names,ArrayList<String> Desc ){
+            super(activity,R.layout.join_group_row,Names);
+            this.context = activity;
+            this.names = Names;
+            this.Desc = Desc;
+        }
+
+        @NonNull
+        @Override
+        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+            //set up row components
+            View row = LayoutInflater.from(context).inflate(R.layout.join_group_row,parent,false);
+            TextView txtGrpName = row.findViewById(R.id.txtlistgrpname);
+            TextView txtGRpDesc = row.findViewById(R.id.txtlistgrpdesc);
+            //set row component info
+            txtGrpName.setText(names.get(position));
+            txtGRpDesc.setText(Desc.get(position));
+
+            return row;
         }
     }
 }

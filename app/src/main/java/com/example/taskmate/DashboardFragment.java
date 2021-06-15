@@ -88,7 +88,7 @@ public class DashboardFragment extends Fragment {
         phpReq.sendRequest(getActivity(), request, new RequestHandler() {
             @Override
             public void processResponse(String resp) {
-                //TODO populate fragment: (set cardviews to => android:stateListAnimator="@null" => so cards dont peak through fragments)
+                //populate fragment: (set cardviews to => android:stateListAnimator="@null" => so cards dont peak through fragments)
                 JSONArray jsonArray;
                 try {
                     jsonArray = new JSONArray(resp);
