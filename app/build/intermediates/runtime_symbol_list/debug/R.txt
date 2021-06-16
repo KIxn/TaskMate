@@ -1819,6 +1819,7 @@ int id btnAddGroup 0x7f090061
 int id btnCreate 0x7f090062
 int id btnJoin 0x7f090063
 int id btnLeave 0x7f090064
+int id btnManualOK 0x7f090205
 int id btnSubmitNewMark 0x7f0901e4
 int id btnsetDueDate 0x7f090065
 int id buttonPanel 0x7f090066
@@ -2393,6 +2394,7 @@ int layout text_view_with_line_height_from_layout 0x7f0c007f
 int layout text_view_with_line_height_from_style 0x7f0c0080
 int layout text_view_with_theme_line_height 0x7f0c0081
 int layout text_view_without_line_height 0x7f0c0082
+int layout user_manual 0x7f0c0089
 int menu menu_drawer 0x7f0d0000
 int mipmap ic_launcher 0x7f0e0000
 int mipmap ic_launcher_foreground 0x7f0e0001

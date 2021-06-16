@@ -1,3 +1,13 @@
+com/example/taskmate/DBReminders.java
+ com.example.taskmate.DBReminders
+com/example/taskmate/PhpReq.java
+ com.example.taskmate.PhpReq
+ com.example.taskmate.PhpReq$1
+ com.example.taskmate.PhpReq$1$1
+com/example/taskmate/RequestHandler.java
+ com.example.taskmate.RequestHandler
+com/example/taskmate/BuildConfig.java
+ com.example.taskmate.BuildConfig
 com/example/taskmate/RemindersFragment.java
  com.example.taskmate.RemindersFragment
  com.example.taskmate.RemindersFragment$1
@@ -11,28 +21,28 @@ com/example/taskmate/AddAssDialogFrag.java
  com.example.taskmate.AddAssDialogFrag$3
  com.example.taskmate.AddAssDialogFrag$4
  com.example.taskmate.AddAssDialogFrag$4$1
-com/example/taskmate/AnnouncementsFragment.java
- com.example.taskmate.AnnouncementsFragment
- com.example.taskmate.AnnouncementsFragment$1
- com.example.taskmate.AnnouncementsFragment$2
- com.example.taskmate.AnnouncementsFragment$3
-com/example/taskmate/BuildConfig.java
- com.example.taskmate.BuildConfig
+com/example/taskmate/MainActivity.java
+ com.example.taskmate.MainActivity
+ com.example.taskmate.MainActivity$1
+ com.example.taskmate.MainActivity$2
+ com.example.taskmate.MainActivity$2$1
+ com.example.taskmate.MainActivity$3
+ com.example.taskmate.MainActivity$MyAsyncTask
+ com.example.taskmate.MainActivity$MyAsyncTask$1
+ com.example.taskmate.MainActivity$MyAsyncTask$1$1
+ com.example.taskmate.MainActivity$MyAsyncTask$1$2
 com/example/taskmate/AddRemDialogFrag.java
  com.example.taskmate.AddRemDialogFrag
  com.example.taskmate.AddRemDialogFrag$1
  com.example.taskmate.AddRemDialogFrag$2
+com/example/taskmate/UserManualDialog.java
+ com.example.taskmate.UserManualDialog
+ com.example.taskmate.UserManualDialog$1
 com/example/taskmate/BoardRoomFragment.java
  com.example.taskmate.BoardRoomFragment
  com.example.taskmate.BoardRoomFragment$1
  com.example.taskmate.BoardRoomFragment$2
  com.example.taskmate.BoardRoomFragment$3
-com/example/taskmate/PhpReq.java
- com.example.taskmate.PhpReq
- com.example.taskmate.PhpReq$1
- com.example.taskmate.PhpReq$1$1
-com/example/taskmate/DBReminders.java
- com.example.taskmate.DBReminders
 com/example/taskmate/DashboardFragment.java
  com.example.taskmate.DashboardFragment
  com.example.taskmate.DashboardFragment$1
@@ -47,18 +57,6 @@ com/example/taskmate/ReminderAdapter.java
  com.example.taskmate.ReminderAdapter
  com.example.taskmate.ReminderAdapter$ReminderHolder
  com.example.taskmate.ReminderAdapter$ReminderHolder$1
-com/example/taskmate/AnnouncementsAdapter.java
- com.example.taskmate.AnnouncementsAdapter
- com.example.taskmate.AnnouncementsAdapter$AnnounceViewHolder
- com.example.taskmate.AnnouncementsAdapter$AnnounceViewHolder$1
-com/example/taskmate/AddAnnDialogFrag.java
- com.example.taskmate.AddAnnDialogFrag
- com.example.taskmate.AddAnnDialogFrag$1
- com.example.taskmate.AddAnnDialogFrag$1$1
- com.example.taskmate.AddAnnDialogFrag$2
-com/example/taskmate/BoardRoomAdapter.java
- com.example.taskmate.BoardRoomAdapter
- com.example.taskmate.BoardRoomAdapter$BoardRoomViewHolder
 com/example/taskmate/StudentAssignmentDialogFrag.java
  com.example.taskmate.StudentAssignmentDialogFrag
  com.example.taskmate.StudentAssignmentDialogFrag$1
@@ -73,6 +71,19 @@ com/example/taskmate/StudentAssignmentDialogFrag.java
  com.example.taskmate.StudentAssignmentDialogFrag$6
  com.example.taskmate.StudentAssignmentDialogFrag$ListAdapter
  com.example.taskmate.StudentAssignmentDialogFrag$handleUI
+com/example/taskmate/AddAnnDialogFrag.java
+ com.example.taskmate.AddAnnDialogFrag
+ com.example.taskmate.AddAnnDialogFrag$1
+ com.example.taskmate.AddAnnDialogFrag$1$1
+ com.example.taskmate.AddAnnDialogFrag$2
+com/example/taskmate/BoardRoomAdapter.java
+ com.example.taskmate.BoardRoomAdapter
+ com.example.taskmate.BoardRoomAdapter$BoardRoomViewHolder
+com/example/taskmate/DashboardAdapter.java
+ com.example.taskmate.DashboardAdapter
+ com.example.taskmate.DashboardAdapter$DashboardViewHolder
+ com.example.taskmate.DashboardAdapter$DashboardViewHolder$1
+ com.example.taskmate.DashboardAdapter$DashboardViewHolder$2
 com/example/taskmate/DeleteReminder.java
  com.example.taskmate.DeleteReminder
  com.example.taskmate.DeleteReminder$1
@@ -82,23 +93,6 @@ com/example/taskmate/DeleteAnnounceDialog.java
  com.example.taskmate.DeleteAnnounceDialog$1
  com.example.taskmate.DeleteAnnounceDialog$2
  com.example.taskmate.DeleteAnnounceDialog$2$1
-com/example/taskmate/RequestHandler.java
- com.example.taskmate.RequestHandler
-com/example/taskmate/MainActivity.java
- com.example.taskmate.MainActivity
- com.example.taskmate.MainActivity$1
- com.example.taskmate.MainActivity$2
- com.example.taskmate.MainActivity$2$1
- com.example.taskmate.MainActivity$3
- com.example.taskmate.MainActivity$MyAsyncTask
- com.example.taskmate.MainActivity$MyAsyncTask$1
- com.example.taskmate.MainActivity$MyAsyncTask$1$1
- com.example.taskmate.MainActivity$MyAsyncTask$1$2
-com/example/taskmate/DashboardAdapter.java
- com.example.taskmate.DashboardAdapter
- com.example.taskmate.DashboardAdapter$DashboardViewHolder
- com.example.taskmate.DashboardAdapter$DashboardViewHolder$1
- com.example.taskmate.DashboardAdapter$DashboardViewHolder$2
 com/example/taskmate/LectAssDialogFrag.java
  com.example.taskmate.LectAssDialogFrag
  com.example.taskmate.LectAssDialogFrag$1
@@ -108,3 +102,12 @@ com/example/taskmate/LectAssDialogFrag.java
  com.example.taskmate.LectAssDialogFrag$4
  com.example.taskmate.LectAssDialogFrag$ListAdapter
  com.example.taskmate.LectAssDialogFrag$setList
+com/example/taskmate/AnnouncementsAdapter.java
+ com.example.taskmate.AnnouncementsAdapter
+ com.example.taskmate.AnnouncementsAdapter$AnnounceViewHolder
+ com.example.taskmate.AnnouncementsAdapter$AnnounceViewHolder$1
+com/example/taskmate/AnnouncementsFragment.java
+ com.example.taskmate.AnnouncementsFragment
+ com.example.taskmate.AnnouncementsFragment$1
+ com.example.taskmate.AnnouncementsFragment$2
+ com.example.taskmate.AnnouncementsFragment$3

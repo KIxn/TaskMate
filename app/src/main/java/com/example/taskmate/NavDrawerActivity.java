@@ -106,8 +106,9 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
                 closeApp();
                 break;
             case R.id.aboutmnu:
-                //TODO About page
-                Toast.makeText(this, "User Manual", Toast.LENGTH_SHORT).show();
+                new UserManualDialog().show(
+                        getSupportFragmentManager(),"Manual"
+                );
                 break;
             default:
                 break;
