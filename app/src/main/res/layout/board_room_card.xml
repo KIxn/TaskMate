@@ -10,7 +10,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="150dp"
-        android:layout_height="90dp"
+        android:layout_height="140dp"
         app:cardElevation="7dp"
         app:cardCornerRadius="10dp"
         android:layout_centerVertical="true"
@@ -21,7 +21,7 @@
         android:foreground="?android:attr/selectableItemBackground"
         app:rippleColor="@color/purple_700">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -34,7 +34,8 @@
                 android:textSize="18sp"
                 android:textAlignment="center"
                 android:text="Place Holder"
-                android:id="@+id/txt_board_grp_name"/>
+                android:id="@+id/txt_board_grp_name"
+                android:layout_centerHorizontal="true"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -44,9 +45,38 @@
                 android:textSize="16sp"
                 android:textAlignment="center"
                 android:text="Assignmnet chopz"
-                android:id="@+id/txt_board_ass"/>
+                android:id="@+id/txt_board_ass"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txt_board_grp_name"/>
 
-        </LinearLayout>
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                app:indicatorColor="#00E317"
+                app:indicatorSize="55dp"
+                android:id="@+id/Board_Room_Mark_Indicator"
+                app:trackColor="#969696"
+                android:layout_weight="1"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txt_board_ass"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:text="/100"
+                android:id="@+id/Board_Room_Mark"
+                android:layout_below="@id/Board_Room_Mark_Indicator"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 

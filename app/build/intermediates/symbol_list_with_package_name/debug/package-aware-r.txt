@@ -1715,6 +1715,8 @@ id ALT
 id Announcements_recucler
 id BOTTOM_END
 id BOTTOM_START
+id Board_Room_Mark
+id Board_Room_Mark_Indicator
 id CTRL
 id FUNCTION
 id LectAssToolbar

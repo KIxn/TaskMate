@@ -113,12 +113,14 @@ public class BoardRoomFragment extends Fragment {
                         JSONArray jsonArray = new JSONArray(resp);
                         ArrayList<String> names = new ArrayList<>();
                         ArrayList<String> ass = new ArrayList<>();
+                        ArrayList<String> marks = new ArrayList<>();
 
                         for(int i = 0;i < jsonArray.length();i++){
                             names.add(jsonArray.getJSONObject(i).getString("GROUP_NAME"));
                             ass.add(jsonArray.getJSONObject(i).getString("ASS_NAME"));
+                            marks.add(jsonArray.getJSONObject(i).getString("MARK"));
                         }
-                        BoardRoomAdapter boardRoomAdapter = new BoardRoomAdapter(requireContext(),names,ass);
+                        BoardRoomAdapter boardRoomAdapter = new BoardRoomAdapter(requireContext(),names,ass,marks);
                         recyclerView.setAdapter(boardRoomAdapter);
 
                     } catch (JSONException e) {
@@ -127,7 +129,6 @@ public class BoardRoomFragment extends Fragment {
                 }
             });
         }else{
-            //TODO lecturer board room
             HttpUrl url = new HttpUrl.Builder()
                     .scheme("https")
                     .host("lamp.ms.wits.ac.za").addPathSegment("home").addPathSegment("s2307935").addPathSegment("getLects.php")
@@ -150,7 +151,7 @@ public class BoardRoomFragment extends Fragment {
                             perms.add(jsonArray.getJSONObject(i).getString("PERM"));
                         }
 
-                        BoardRoomAdapter boardRoomAdapter = new BoardRoomAdapter(requireContext(),ems,perms);
+                        BoardRoomAdapter boardRoomAdapter = new BoardRoomAdapter(requireContext(),ems,perms,null);
                         recyclerView.setAdapter(boardRoomAdapter);
                     } catch (JSONException e) {
                         e.printStackTrace();

@@ -38,11 +38,10 @@ com/example/taskmate/AddRemDialogFrag.java
 com/example/taskmate/UserManualDialog.java
  com.example.taskmate.UserManualDialog
  com.example.taskmate.UserManualDialog$1
-com/example/taskmate/BoardRoomFragment.java
- com.example.taskmate.BoardRoomFragment
- com.example.taskmate.BoardRoomFragment$1
- com.example.taskmate.BoardRoomFragment$2
- com.example.taskmate.BoardRoomFragment$3
+com/example/taskmate/AnnouncementsAdapter.java
+ com.example.taskmate.AnnouncementsAdapter
+ com.example.taskmate.AnnouncementsAdapter$AnnounceViewHolder
+ com.example.taskmate.AnnouncementsAdapter$AnnounceViewHolder$1
 com/example/taskmate/DashboardFragment.java
  com.example.taskmate.DashboardFragment
  com.example.taskmate.DashboardFragment$1
@@ -76,9 +75,11 @@ com/example/taskmate/AddAnnDialogFrag.java
  com.example.taskmate.AddAnnDialogFrag$1
  com.example.taskmate.AddAnnDialogFrag$1$1
  com.example.taskmate.AddAnnDialogFrag$2
-com/example/taskmate/BoardRoomAdapter.java
- com.example.taskmate.BoardRoomAdapter
- com.example.taskmate.BoardRoomAdapter$BoardRoomViewHolder
+com/example/taskmate/AnnouncementsFragment.java
+ com.example.taskmate.AnnouncementsFragment
+ com.example.taskmate.AnnouncementsFragment$1
+ com.example.taskmate.AnnouncementsFragment$2
+ com.example.taskmate.AnnouncementsFragment$3
 com/example/taskmate/DashboardAdapter.java
  com.example.taskmate.DashboardAdapter
  com.example.taskmate.DashboardAdapter$DashboardViewHolder
@@ -102,12 +103,11 @@ com/example/taskmate/LectAssDialogFrag.java
  com.example.taskmate.LectAssDialogFrag$4
  com.example.taskmate.LectAssDialogFrag$ListAdapter
  com.example.taskmate.LectAssDialogFrag$setList
-com/example/taskmate/AnnouncementsAdapter.java
- com.example.taskmate.AnnouncementsAdapter
- com.example.taskmate.AnnouncementsAdapter$AnnounceViewHolder
- com.example.taskmate.AnnouncementsAdapter$AnnounceViewHolder$1
-com/example/taskmate/AnnouncementsFragment.java
- com.example.taskmate.AnnouncementsFragment
- com.example.taskmate.AnnouncementsFragment$1
- com.example.taskmate.AnnouncementsFragment$2
- com.example.taskmate.AnnouncementsFragment$3
+com/example/taskmate/BoardRoomAdapter.java
+ com.example.taskmate.BoardRoomAdapter
+ com.example.taskmate.BoardRoomAdapter$BoardRoomViewHolder
+com/example/taskmate/BoardRoomFragment.java
+ com.example.taskmate.BoardRoomFragment
+ com.example.taskmate.BoardRoomFragment$1
+ com.example.taskmate.BoardRoomFragment$2
+ com.example.taskmate.BoardRoomFragment$3

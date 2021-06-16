@@ -133,6 +133,7 @@ public class LectAssDialogFrag extends DialogFragment {
                     public void processResponse(String resp) {
                         //Toast.makeText(requireActivity(), resp, Toast.LENGTH_SHORT).show();
                         selectGroup(currentGroupPosition);
+                        edtNewMark.setText("");
                     }
                 });
             }
