@@ -22,10 +22,6 @@
             android:id="@+id/boardroommnu"
             android:icon="@drawable/ic_boardroom"
             android:title="Board Room" />
-        <item
-            android:id="@+id/boredroommnu"
-            android:icon="@drawable/ic_additional"
-            android:title="Additional Content" />
 
 
     </group>
@@ -40,11 +36,7 @@
             <item
                 android:id="@+id/aboutmnu"
                 android:icon="@drawable/ic_about"
-                android:title="About" />
-            <item
-                android:id="@+id/deletemnu"
-                android:icon="@drawable/ic_delete"
-                android:title="Delete User" />
+                android:title="User Manual" />
         </menu>
     </item>
 

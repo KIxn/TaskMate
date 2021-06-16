@@ -1790,6 +1790,7 @@ int id activity_chooser_view_content 0x7f090048
 int id add 0x7f090049
 int id add_announcement 0x7f0901ed
 int id add_assignment 0x7f09004a
+int id add_reminder 0x7f0901f7
 int id alertTitle 0x7f09004b
 int id aligned 0x7f09004c
 int id all 0x7f09004d
@@ -1809,8 +1810,9 @@ int id baseline 0x7f090059
 int id beginOnFirstDraw 0x7f09005a
 int id beginning 0x7f09005b
 int id blocking 0x7f09005c
+int id boardrefresh 0x7f0901f8
 int id boardroommnu 0x7f09005d
-int id boredroommnu 0x7f09005e
+int id boardroomrecycler 0x7f0901f9
 int id bottom 0x7f09005f
 int id bounce 0x7f090060
 int id btnAddGroup 0x7f090061
@@ -1862,7 +1864,6 @@ int id decelerate 0x7f09008d
 int id decelerateAndComplete 0x7f09008e
 int id decor_content_parent 0x7f09008f
 int id default_activity_button 0x7f090090
-int id deletemnu 0x7f090091
 int id deltaRelative 0x7f090092
 int id dependency_ordering 0x7f090093
 int id design_bottom_sheet 0x7f090094
@@ -1892,6 +1893,8 @@ int id edit_query 0x7f0900ab
 int id edtLectNewMark 0x7f0901e5
 int id edtannDesc 0x7f0901f3
 int id edtannTopic 0x7f0901f4
+int id edtremDesc 0x7f090201
+int id edtremTopic 0x7f090202
 int id elastic 0x7f0900ac
 int id end 0x7f0900ad
 int id endToStart 0x7f0900ae
@@ -2051,6 +2054,8 @@ int id radio 0x7f090144
 int id ratio 0x7f090145
 int id rectangles 0x7f090146
 int id rememberchk 0x7f090147
+int id reminderrecycler 0x7f0901fa
+int id reminderrefresh 0x7f0901fb
 int id remindersmnu 0x7f090148
 int id reverseSawtooth 0x7f090149
 int id rgbLect 0x7f09014a
@@ -2178,9 +2183,16 @@ int id txtAssignment 0x7f0901c0
 int id txtDate 0x7f0901c1
 int id txtGroupDesc 0x7f0901c2
 int id txtGroupName 0x7f0901c3
+int id txtReminderDate 0x7f0901fc
+int id txtReminderDesc 0x7f0901fd
+int id txtReminderTopic 0x7f0901fe
 int id txtStudAssMark 0x7f0901c4
 int id txtStudAssName 0x7f0901c5
 int id txtStudGroupName 0x7f0901c6
+int id txt_board_ass 0x7f0901ff
+int id txt_board_grp_name 0x7f090200
+int id txtaddremCancel 0x7f090203
+int id txtaddremOk 0x7f090204
 int id txtannCancel 0x7f0901f5
 int id txtannOk 0x7f0901f6
 int id txtassCancel 0x7f0901c7
@@ -2276,10 +2288,11 @@ int layout abc_tooltip 0x7f0c001b
 int layout activity_main 0x7f0c001c
 int layout activity_nav_drawer 0x7f0c001d
 int layout addann_layout 0x7f0c0085
-int layout additional_fragment 0x7f0c001e
+int layout addrem_layt 0x7f0c0088
 int layout announcement_card 0x7f0c0084
 int layout announcements_fragment 0x7f0c001f
 int layout assignment_card 0x7f0c0020
+int layout board_room_card 0x7f0c0086
 int layout board_room_fragment 0x7f0c0021
 int layout custom_dialog 0x7f0c0022
 int layout dashboard_fragment 0x7f0c0023
@@ -2360,6 +2373,7 @@ int layout notification_template_media 0x7f0c006c
 int layout notification_template_media_custom 0x7f0c006d
 int layout notification_template_part_chronometer 0x7f0c006e
 int layout notification_template_part_time 0x7f0c006f
+int layout reminder_card 0x7f0c0087
 int layout reminders_fragment 0x7f0c0070
 int layout select_dialog_item_material 0x7f0c0071
 int layout select_dialog_multichoice_material 0x7f0c0072

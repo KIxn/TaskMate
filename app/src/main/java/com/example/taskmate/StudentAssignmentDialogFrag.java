@@ -287,7 +287,7 @@ public class StudentAssignmentDialogFrag extends DialogFragment {
                     ContentLayout.setVisibility(View.VISIBLE);
                     loadingIndicator.setVisibility(View.GONE);
                 }else{
-                    //TODO set up create group/join group
+                    Toast.makeText(requireContext(), "Please Create or Join a group to utilize Overview page", Toast.LENGTH_LONG).show();
                     ContentLayout.setVisibility(View.VISIBLE);
                     loadingIndicator.setVisibility(View.GONE);
                     btnCreate.setVisibility(View.VISIBLE);

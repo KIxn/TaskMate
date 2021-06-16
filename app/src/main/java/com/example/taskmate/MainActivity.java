@@ -397,7 +397,7 @@ public class MainActivity extends AppCompatActivity {
                 ReqAgent.sendRequest(MainActivity.this, req, new RequestHandler() {
                     @Override
                     public void processResponse(String resp) {
-                        Toast.makeText(MainActivity.this, resp, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, resp, Toast.LENGTH_LONG).show();
                         if (chbrem.isChecked()){
                             //////////////////////////////////save user//////////////////////////////////////////////
                             PhpReq ReqAgent1 = new PhpReq();

@@ -131,7 +131,7 @@ public class LectAssDialogFrag extends DialogFragment {
                 phpReq.sendRequest(requireActivity(), request, new RequestHandler() {
                     @Override
                     public void processResponse(String resp) {
-                        Toast.makeText(requireActivity(), resp, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(requireActivity(), resp, Toast.LENGTH_SHORT).show();
                         selectGroup(currentGroupPosition);
                     }
                 });

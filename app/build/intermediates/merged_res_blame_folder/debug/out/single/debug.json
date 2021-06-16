@@ -4,6 +4,10 @@
         "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\layout\\announcement_card.xml"
     },
     {
+        "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\layout_reminder_card.xml.flat",
+        "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\layout\\reminder_card.xml"
+    },
+    {
         "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
@@ -96,6 +100,10 @@
         "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\drawable\\ic_boardroom.xml"
     },
     {
+        "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\layout_addrem_layt.xml.flat",
+        "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\layout\\addrem_layt.xml"
+    },
+    {
         "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\layout_board_room_fragment.xml.flat",
         "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\layout\\board_room_fragment.xml"
     },
@@ -112,12 +120,12 @@
         "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\layout\\activity_nav_drawer.xml"
     },
     {
-        "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\layout_additional_fragment.xml.flat",
-        "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\layout\\additional_fragment.xml"
-    },
-    {
         "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\layout_dashboard_fragment.xml.flat",
         "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\layout\\dashboard_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\layout_board_room_card.xml.flat",
+        "source": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\src\\main\\res\\layout\\board_room_card.xml"
     },
     {
         "merged": "C:\\Users\\KIAN\\Desktop\\TaskMate\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",

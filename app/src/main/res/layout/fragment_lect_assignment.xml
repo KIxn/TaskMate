@@ -131,7 +131,7 @@
             android:textColor="@color/black"
             android:textSize="17sp"
             android:textAlignment="center"
-            android:text="Select Group -> To Edit Mark"
+            android:text="Select Group -> Then Proceed to Edit Mark"
             android:layout_marginBottom="6dp"
             android:id="@+id/txtselectinfo"
             android:layout_centerHorizontal="true"/>

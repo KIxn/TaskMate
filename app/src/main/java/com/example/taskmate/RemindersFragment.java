@@ -1,12 +1,21 @@
 package com.example.taskmate;
 
+import android.database.Cursor;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,12 +64,68 @@ public class RemindersFragment extends Fragment {
         }
     }
 
+    RecyclerView recyclerView;
+    FloatingActionButton floatingActionButton;
+    SwipeRefreshLayout swipeRefreshLayout;
+    DBReminders dbhelper;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.reminders_fragment, container, false);
-        //TODO add refresh layout and populate
+        recyclerView = view.findViewById(R.id.reminderrecycler);
+        floatingActionButton = view.findViewById(R.id.add_reminder);
+        swipeRefreshLayout = view.findViewById(R.id.reminderrefresh);
+        dbhelper = new DBReminders(requireContext());
+
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(requireContext(),1,GridLayoutManager.VERTICAL,false);
+        recyclerView.setLayoutManager(gridLayoutManager);
+        recyclerView.setHasFixedSize(true);
+
+        populateCards();
+
+        //ADD REMINDER BUTTON
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AddRemDialogFrag().show(
+                        getChildFragmentManager(),"Adding Reminder"
+                );
+            }
+        });
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                populateCards();
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
+
         return view;
+    }
+
+    private void populateCards() {
+
+        Cursor result = dbhelper.getReminders();
+        if(result.getCount() == 0){
+            Toast.makeText(requireContext(), "No Reminders to show :)", Toast.LENGTH_SHORT).show();
+            return;
+        }else{
+            ArrayList<String> topics = new ArrayList<>();
+            ArrayList<String> desc = new ArrayList<>();
+            ArrayList<String> dates = new ArrayList<>();
+
+            while (result.moveToNext()){
+                topics.add(result.getString(0));
+                desc.add(result.getString(1));
+                dates.add(result.getString(2));
+            }
+
+            ReminderAdapter reminderAdapter = new ReminderAdapter(requireContext(),topics,desc,dates,getChildFragmentManager());
+            recyclerView.setAdapter(reminderAdapter);
+        }
+
     }
 }

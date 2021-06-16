@@ -22,12 +22,16 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import okhttp3.HttpUrl;
+import okhttp3.Request;
+
 public class NavDrawerActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     public static String USER_ID; public static String PERM;
     public static FragmentTransaction fragmentTransaction;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +71,6 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
 
         switch (item.getItemId()){
             case R.id.dashboardmnu:
-                //TODO DashBoard
                 DashboardFragment dashboardFragment = DashboardFragment.newInstance(USER_ID,PERM);
                 fragmentManager = getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
@@ -76,7 +79,6 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
                 fragmentTransaction.add(R.id.frag_container,dashboardFragment,"DASHBOARD_FRAGMENT").commit();
                 break;
             case R.id.announcementsmnu:
-                //TODO Announcements
                 AnnouncementsFragment announcementsFragment = AnnouncementsFragment.newInstance(USER_ID, PERM);
                 fragmentManager = getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
@@ -85,7 +87,6 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
                 fragmentTransaction.add(R.id.frag_container,announcementsFragment,"ANNOUNCEMENTS_FRAGMENT").commit();
                 break;
             case R.id.remindersmnu:
-                //TODO Reminders
                 RemindersFragment remindersFragment = RemindersFragment.newInstance(USER_ID, PERM);
                 fragmentManager = getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
@@ -94,7 +95,6 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
                 fragmentTransaction.add(R.id.frag_container,remindersFragment,"REMINDERS_FRAGMENT").commit();
                 break;
             case R.id.boardroommnu:
-                //TODO BoardRoom
                 BoardRoomFragment boardRoomFragment = BoardRoomFragment.newInstance(USER_ID,PERM);
                 fragmentManager = getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
@@ -102,26 +102,12 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
                 fragmentTransaction.addToBackStack("3");
                 fragmentTransaction.add(R.id.frag_container,boardRoomFragment,"BOARDROOM_FRAGMENT").commit();
                 break;
-            case R.id.boredroommnu:
-                //TODO Additional Content
-                AdditionalFragment additionalFragment = AdditionalFragment.newInstance(USER_ID,PERM);
-                fragmentManager = getSupportFragmentManager();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_right,R.anim.enter_from_right,R.anim.exit_to_right);
-                fragmentTransaction.addToBackStack("4");
-                fragmentTransaction.add(R.id.frag_container,additionalFragment,"ADDITIONAL_FRAGMENT").commit();
-                break;
             case R.id.logoutmnu:
-                //TODO Log-Out
-                Toast.makeText(this, "Log-Out!!!!!!!!!!!!!", Toast.LENGTH_SHORT).show();
+                closeApp();
                 break;
             case R.id.aboutmnu:
                 //TODO About page
-                Toast.makeText(this, "About YungK", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.deletemnu:
-                //TODO Delete User
-                Toast.makeText(this, "!!!!!!!!!!DELETE USER!!!!!!!!!!!!!!!!!!!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "User Manual", Toast.LENGTH_SHORT).show();
                 break;
             default:
                 break;
@@ -129,6 +115,24 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
         //close drawer
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    //log out/delete user
+    private void closeApp() {
+        sharedPreferences = getSharedPreferences("userLog",MODE_PRIVATE);
+        String tmp = sharedPreferences.getString("userDetails","null");
+        if(!((tmp == null) || (tmp.length() == 0))){
+            if(sharedPreferences.getString("userDetails","null").equals("null")){
+                //if no preferances
+                finish();
+            }else{
+                sharedPreferences = getSharedPreferences("userLog",MODE_PRIVATE);
+                sharedPreferences.edit().putString("userDetails","null").apply();
+                finish();
+            }
+        }else{
+            finish();
+        }
     }
 
     //closes nav pane if opened & keeps selected menu item responsive to navigation changes
@@ -162,9 +166,6 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
                             break;
                         case 3:
                             navigationView.setCheckedItem(R.id.boardroommnu);
-                            break;
-                        case 4:
-                            navigationView.setCheckedItem(R.id.boredroommnu);
                             break;
                         default:
                             throw new IllegalStateException("Unexpected value: " + Integer.parseInt(getSupportFragmentManager().getBackStackEntryAt(getSupportFragmentManager().getBackStackEntryCount() - 1).getName()));
