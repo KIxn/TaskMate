@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
     //key for activity
     private static final int REQ_CODE = 123;
-
+    //MAIN
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
         chbrem = (CheckBox) findViewById(R.id.rememberchk);
         sharedPreferences = getSharedPreferences("userLog",MODE_PRIVATE);
 
-        //check if user has selected to remember
+        //check if user has selected to remember //SHARED PREF
         if(!sharedPreferences.getString("userDetails","null").equals("null")){
             try {
                 JSONObject jsonObject = new JSONObject(sharedPreferences.getString("userDetails",""));
@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Click Listener for Onclick Event logbtn
+        //Click Listener for Onclick Event logbtn //LOG-IN
         logbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -230,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
                                 JSONObject jsonObject = arr.getJSONObject(0);
                                 if(((email).toLowerCase().equals(jsonObject.getString("EMAIL").toLowerCase())) && (pswd_hash.equals(jsonObject.getString("PSWD")))){
                                     bAuthorized = true;
-                                    ////////////////////////////////save log in//////////////////////////
+                                    ////////////////////////////////SAVE LOG IN//////////////////////////
                                     if (chbrem.isChecked()){
                                         sharedPreferences = getSharedPreferences("userLog",MODE_PRIVATE);
                                         //asynchronous write
@@ -300,6 +300,7 @@ public class MainActivity extends AppCompatActivity {
                 if(!perm[0].equals("")) {
                     //use AsyncTask to accomplih this
                     tmpstr = "https://lamp.ms.wits.ac.za/home/s2307935/checkUser.php?email=" + email;
+                    //MYTASK
                     new MyAsyncTask().execute();
                     return;
                 }else{

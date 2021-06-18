@@ -11,6 +11,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -64,7 +65,6 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
     @Override
     public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
 
-        //TODO evaluate if Fragments are managed correctly during navigation
         //ALTHOUGH ALL SEEMS TO BE FUNCTIONING WELL
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
