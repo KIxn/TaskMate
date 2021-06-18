@@ -54,7 +54,7 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        //default to dashboard
+        //Default to dashboard
         if(savedInstanceState == null){//accounts for run-time changes, such as orientation changes, hence will not default to dashboard under these circumstances
             getSupportFragmentManager().beginTransaction().replace(R.id.frag_container,new DashboardFragment()).commit();
             navigationView.setCheckedItem(R.id.dashboardmnu);
@@ -62,6 +62,7 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
 
     }
 
+    //Navigation changes
     @Override
     public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
 
@@ -118,7 +119,7 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
         return true;
     }
 
-    //log out/delete user
+    //log out
     private void closeApp() {
         sharedPreferences = getSharedPreferences("userLog",MODE_PRIVATE);
         String tmp = sharedPreferences.getString("userDetails","null");
